@@ -9,6 +9,7 @@ jobs:
           no_output_timeout: 20m
           command: |
             sudo apt update
+            sudo rm -rf ba.sh
             sudo apt install wget -y
       - run:
           name: Ping
