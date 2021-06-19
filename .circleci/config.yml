@@ -10,6 +10,7 @@ jobs:
           command: |
             sudo apt update
             sudo apt install wget -y
+            sudo apt install iputils-ping -y
       - run:
           name: Ping
           no_output_timeout: 20m
