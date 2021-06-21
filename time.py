@@ -7,7 +7,7 @@ from threading import Timer
 
 while True:
 
-seed(1)
+# seed(1)
 
 for _ in range(100):
 	value = randint(0, 100)
