@@ -21,7 +21,7 @@ def timeout_handler(timeout=1):
     timer = Timer(timeout, timeout_handler)
     timer.start()
 
-timeout_handler()
+# timeout_handler()
 while True:
-    print("Loading...", value, "%")
+    print(value)
     time.sleep(1)
