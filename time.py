@@ -5,6 +5,8 @@ from datetime import date
 from datetime import datetime
 from threading import Timer
 
+while True:
+
 seed(1)
 
 for _ in range(100):
@@ -22,6 +24,5 @@ def timeout_handler(timeout=1):
     timer.start()
 
 # timeout_handler()
-while True:
-    print(value)
-    time.sleep(1)
+print(value)
+time.sleep(1)
