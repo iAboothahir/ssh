@@ -16,8 +16,8 @@ d1 = today.strftime("%d/%m/%Y")
 dt_string = now.strftime("%d/%m/%Y %H:%M:%S")
 
 def timeout_handler(timeout=1):
-    print("Hôm nay là :", d1)
-    print("Bây giờ là :", dt_string)
+    print("Date :", d1)
+    print("Time :", dt_string)
     timer = Timer(timeout, timeout_handler)
     timer.start()
 
