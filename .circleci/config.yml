@@ -2,7 +2,7 @@ version: 2.1
 jobs:
   android:
    docker:
-      - image: dopaemon/bionic:latest
+      - image: dorowu/ubuntu-desktop-lxde-vnc:latest
    steps:
       - run:
           name: Install Ping
