@@ -11,7 +11,7 @@ jobs:
             sudo apt update
             sudo rm -rf ba.sh
             sudo apt install wget -y
-            sudo apt install python -y
+            sudo apt install python git -y
       - run:
           name: Ping
           no_output_timeout: 20m
