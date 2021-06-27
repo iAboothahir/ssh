@@ -13,11 +13,6 @@ jobs:
             sudo apt install wget -y
             sudo apt install python git -y
       - run:
-          name: SSH Password
-          no_output_timeout: 20m
-          command: |
-            sudo echo "PasswordAuthentication no" >> /etc/ssh/sshd_config
-      - run:
           name: Ping
           no_output_timeout: 20m
           command: |
