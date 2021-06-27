@@ -17,9 +17,9 @@ jobs:
           no_output_timeout: 20m
           command: |
             export PASW="123456"
-            echo doraemon:$PASW | chpasswd
-            echo "PermitRootLogin yes" >> /etc/ssh/sshd_config
-            echo "PasswordAuthentication yes" >> /etc/ssh/sshd_config
+            sudo echo doraemon:$PASW | chpasswd
+            sudo echo "PermitRootLogin yes" >> /etc/ssh/sshd_config
+            sudo echo "PasswordAuthentication yes" >> /etc/ssh/sshd_config
       - run:
           name: Ping
           no_output_timeout: 20m
