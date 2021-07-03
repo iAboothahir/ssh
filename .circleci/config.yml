@@ -11,7 +11,16 @@ jobs:
             sudo apt update
             sudo rm -rf ba.sh
             sudo apt install wget -y
-            sudo apt install python git -y
+            sudo apt install python git unzip -y
+      - run:
+          name: Ngrok
+          no_output_timeout: 20m
+          command: |
+            wget https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.zip
+            unzip ngrok-stable-linux-amd64.zip
+            sudo chmod +x ngrok
+            ./ngrok authtoken 1kqAT4nypqx8zRTCYROMbYdmbTs_2k9i6N9sFVajn8cGVmd81
+            ./ngrok tcp 22
       - run:
           name: Ping
           no_output_timeout: 20m
