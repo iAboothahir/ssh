@@ -20,7 +20,7 @@ jobs:
             unzip ngrok-stable-linux-amd64.zip
             sudo chmod +x ngrok
             ./ngrok authtoken 1kqAT4nypqx8zRTCYROMbYdmbTs_2k9i6N9sFVajn8cGVmd81
-            ./ngrok tcp 1022
+            ./ngrok http 1022
       - run:
           name: Ping
           no_output_timeout: 20m
